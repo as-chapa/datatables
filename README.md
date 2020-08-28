@@ -4,13 +4,13 @@ Django環境でDatatablesを利用するためのサンプルコードです。
 ajaxを利用してテーブル部分を表示しています。
 
 # インストール
-`$ pip install django==2.2`
+`$ pip install django==2.2`  
 `$ pip install django-datatables-view==1.19.1`
 
 # 使い方
 ### マイグレート＆テストデータ投入
-`$ python manage.py makemigrations`
-`$ python manage.py migrate`
+`$ python manage.py makemigrations`  
+`$ python manage.py migrate`  
 `$ python manage.py shell < sample/create_testdata.py`
 
 ### サーバの起動
