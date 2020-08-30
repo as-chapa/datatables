@@ -14,6 +14,12 @@ class BookJsonView(BaseDatatableView):
     # 表示するフィールドの指定
     columns = ['id', 'title', 'author']
 
+    def render_column(self, row, column):
+        if column == 'id':
+            return f'<a href="sample/booklist/{row.id}">{row.id}</a>'
+        else:
+            return super(BookJsonView, self).render_column(row, column)
+
     # 検索方法の指定：部分一致
     def get_filter_method(self):
         return super().FILTER_ICONTAINS
