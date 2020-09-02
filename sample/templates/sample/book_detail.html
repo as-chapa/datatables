@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block page_title %}本の詳細ページ{% endblock %}
+{% block h1 %}本の詳細ページ{% endblock %}
+{% block lead %}こちらのページでは、本の詳細な内容を表示します{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="mb-2"><a href="{% url 'sample:booklist' %}">戻る</a></div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">分類</th>
+            <th scope="col">内容</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">タイトル</th>
+            <td>{{ object.title }}</td>
+          </tr>
+          <tr>
+            <th scope="row">著者名</th>
+            <td>{{ object.author }}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+{% endblock %}
