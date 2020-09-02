@@ -1,3 +1,5 @@
 db.sqlite3
 Pipfile*
 env*
+*.pyc
+__pycache__/
